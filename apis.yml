@@ -1,17 +1,32 @@
 aid: apnimed
 name: Apnimed
-description: 'Apnimed is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Apnimed is a late-stage clinical-stage pharmaceutical company headquartered
+  in Cambridge, Massachusetts, developing novel oral drug therapies for sleep-related
+  breathing disorders. Its lead candidate AD109 (Oxnimbi) is a fixed-dose combination
+  of an anti-muscarinic and a selective norepinephrine reuptake inhibitor, designed
+  to improve upper-airway muscle activity and treat an underlying neuromuscular cause
+  of obstructive sleep apnea (OSA) rather than manage it mechanically. The company
+  was founded in 2017, partners with Shionogi through the Shionogi-Apnimed Sleep Science
+  (SASS) joint venture, and had a New Drug Application for AD109 accepted by the FDA
+  in 2026. Apnimed is a drug developer, not a software vendor: it publishes no developer
+  portal, API documentation, or machine-readable API artifacts.'
+image: https://apnimed.com/wp-content/themes/apnimed/favicon/android-icon-192x192.png
 url: https://raw.githubusercontent.com/api-evangelist/apnimed/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profile
+x-tier-reason: no-api-surface
 specificationVersion: '0.20'
 created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Pharmaceuticals
+- Biotechnology
+- Health Care
+- Life Sciences
+- Sleep Medicine
+- Clinical Trials
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,60 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/apnimed-domain-security.yml
 - type: Website
+  url: https://apnimed.com/
+- type: About
+  url: https://apnimed.com/about/
+- type: Blog
+  url: https://apnimed.com/news/
+- type: Support
+  url: https://apnimed.com/contact-us/
+- type: TermsOfService
+  url: https://apnimed.com/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://apnimed.com/privacy-policy/
+- type: InvestorRelations
+  url: https://ir.apnimed.com/
+- type: Careers
+  url: https://apnimed.com/careers/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/apnimed
+- type: SecondaryMarket
   url: https://forgeglobal.com/apnimed_stock/
+- type: BlogFeeds
+  url: https://apnimed.com/feed/
+- type: PressReleases
+  url: https://apnimed.com/news/
+- type: Research
+  url: https://apnimed.com/publications/
+- type: LLMsTxt
+  url: llms/apnimed-llms.txt
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Apnimed is a clinical-stage drug developer whose product is an oral pill (AD109) for
+    obstructive sleep apnea, so there is no software surface to expose; apnimed.com is a
+    WordPress marketing site whose full Yoast sitemap lists 24 pages and not one developer,
+    API, or documentation page, and api./docs./developer.apnimed.com do not resolve in DNS.
+  evidence:
+  - url: https://apnimed.com/openapi.json
+    status: 404
+  - url: https://apnimed.com/llms.txt
+    status: 404
+  - url: https://apnimed.com/.well-known/agent-card.json
+    status: 404
+  - url: https://apnimed.com/.well-known/security.txt
+    status: 404
+  - url: https://api.apnimed.com/openapi.json
+    status: 0
+  - url: https://ir.apnimed.com/llms.txt
+    status: 404
+  checked: '2026-08-06'
